@@ -1,0 +1,11 @@
+{
+  "src": [
+    "pages/Index",
+    "pages/Second",
+    "pages/LeagueCategory",
+    "pages/Matches",
+    "pages/Standings",
+    "pages/Players",
+    "pages/News"
+  ]
+}
