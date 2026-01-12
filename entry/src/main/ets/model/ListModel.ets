@@ -16,7 +16,7 @@ class MainMenuItem implements MainList {
 
 export const mainMenuItems: MainMenuItem[] = [
   new MainMenuItem('Leagues', $r('app.media.footballstadium2svgrepocom')),
-  new MainMenuItem('News', $r('app.media.news')),
+  new MainMenuItem('News', $r('app.media.news'))
 ];
 
 export

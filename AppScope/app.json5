@@ -1,6 +1,6 @@
 {
   "app": {
-    "bundleName": "com.hmosdemos.SoccerScore",
+    "bundleName": "com.hmosdemos.wearable.soccer_score",
     "vendor": "hmosdemos",
     "versionCode": 1000000,
     "versionName": "1.0.0",

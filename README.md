@@ -1,16 +1,16 @@
 > **Note:** To access all shared projects, get information about environment setup, and view other guides, please visit [Explore-In-HMOS-Wearable Index](https://github.com/Explore-In-HMOS-Wearable/hmos-index).
 
-# SoccerScore
+# soccer-score
 
 SoccerScore is a demo app that allows users to follow all football leagues using Notification Kit, sending live updates for matches, scores, and events.
 
 # Preview
 
 <p align="left">
-  <img src="images/img3.png" width="24%">
-  <img src="images/img1.png" width="24%">
-  <img src="images/img4.png" width="24%">
-  <img src="images/img2.png" width="24%">
+  <img src="screenshots/img3.png" width="24%">
+  <img src="screenshots/img1.png" width="24%">
+  <img src="screenshots/img4.png" width="24%">
+  <img src="screenshots/img2.png" width="24%">
 </p>
 
 # Use Cases
@@ -63,5 +63,5 @@ Huawei Watch 5
 
 # LICENSE
 
-SoccerScore is distributed under the terms of the MIT License.  
+soccer-score is distributed under the terms of the MIT License.  
 See the [LICENSE](/LICENSE) for more information.

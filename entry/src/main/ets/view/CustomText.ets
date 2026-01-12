@@ -1,10 +1,6 @@
-import { router } from '@kit.ArkUI';
-
 @Component
 export struct CustomText {
   @Prop title: string;
-  @Prop router:string;
-
 
   build() {
 
@@ -12,9 +8,7 @@ export struct CustomText {
       .fontSize(15)
       .fontWeight(FontWeight.Medium)
       .fontColor('#D6C2FF')
-      .onClick(() => {
-        router.pushUrl({ url: this.router })
-      })
+
 
   }
 }

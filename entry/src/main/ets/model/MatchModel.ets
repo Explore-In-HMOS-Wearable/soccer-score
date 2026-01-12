@@ -45,26 +45,26 @@ export const premierLeagueMatches: MatchScore[] = [
 
 // La Liga
 export const laLigaMatches: MatchScore[] = [
-  new MatchScore($r('app.media.Real_Madrid_CF'), 3, 1, 0, $r("app.media.barcelona")),
+  new MatchScore($r('app.media.Real_Madrid_CF'), 3, 1, 0, $r('app.media.barcelona')),
   new MatchScore($r('app.media.Atletico_Madrid_logo'), 1, 1, 2, $r('app.media.Real_Betis')),
   new MatchScore($r('app.media.Real_Betis'), 2, 0, 1, $r('app.media.Real_Madrid_CF')),
-  new MatchScore($r("app.media.barcelona"), 0, 2, 3, $r('app.media.Valenciacf'))
+  new MatchScore($r('app.media.barcelona'), 0, 2, 3, $r('app.media.Valenciacf'))
 ];
 
 // Bundesliga
 export const bundesligaMatches: MatchScore[] = [
-  new MatchScore($r("app.media.bayern"), 5, 0, 1, $r('app.media.Borussia_Dortmund_logo')),
+  new MatchScore($r('app.media.bayern'), 5, 0, 1, $r('app.media.Borussia_Dortmund_logo')),
   new MatchScore($r('app.media.Logo_Eintracht_Frankfurt_1998'), 2, 2, 3, $r('app.media.Bayer_Leverkusen_Logo')),
-  new MatchScore($r('app.media.Bayer_Leverkusen_Logo'), 1, 3, 0, $r("app.media.bayern")),
+  new MatchScore($r('app.media.Bayer_Leverkusen_Logo'), 1, 3, 0, $r('app.media.bayern')),
   new MatchScore($r('app.media.Logo_Eintracht_Frankfurt_1998'), 2, 1, 2, $r('app.media.Borussia_Dortmund_logo'))
 ];
 
 // Serie A
 export const serieAMatches: MatchScore[] = [
-  new MatchScore($r("app.media.juventus"), 1, 0, 2, $r('app.media.Logo_of_AC_Milan')),
+  new MatchScore($r('app.media.juventus'), 1, 0, 2, $r('app.media.Logo_of_AC_Milan')),
   new MatchScore($r('app.media.Logo_of_AC_Milan'), 2, 3, 1, $r('app.media.AS_Roma_Logo_2017')),
   new MatchScore($r('app.media.AS_Roma_Logo_2017'), 2, 2, 1, $r('app.media.FC_Internazionale_Milano_2021')),
-  new MatchScore($r("app.media.juventus"), 0, 1, 3, $r('app.media.lazio'))
+  new MatchScore($r('app.media.juventus'), 0, 1, 3, $r('app.media.lazio'))
 ];
 
 // Ligue 1

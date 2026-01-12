@@ -33,14 +33,12 @@ export function getStandingsByLeagueName(): StandingsModel[] {
 
 @Builder
 function header() {
-  Column() {
     Text('Standings')
       .fontSize(28)
       .fontWeight(FontWeight.Bold)
       .textAlign(TextAlign.Center)
       .margin({ top: 16, bottom: 12 })
       .fontColor('#D6C2FF')
-  }
 }
 
 @Entry
@@ -52,65 +50,65 @@ export struct Standings {
   header: ComponentContent<object> = new ComponentContent(this.context, wrapBuilder(header))
 
   build() {
-    Flex() {
-      Row() {
-        Column() {
-          ArcList({ header: this.header }) {
-            ForEach(getStandingsByLeagueName(), (team: StandingsModel, index: number) => {
-              ArcListItem() {
-                Row({ space: 10 }) {
+    NavDestination() {
+      Flex() {
+            ArcList({ header: this.header }) {
+              ForEach(getStandingsByLeagueName(), (team: StandingsModel, index: number) => {
+                ArcListItem() {
+                  Row({ space: 10 }) {
 
-                  Text(`${index + 1}.`)
-                    .fontSize(12)
-                    .fontColor('#FFD700')
-                    .width(12)
-
-
-                  Column({ space: 2 }) {
-                    Text(team.teamName)
-                      .fontSize(16)
-                      .fontColor('#D6C2FF')
-                      .fontWeight(FontWeight.Bold)
-
-                    Text(`Pts: ${team.points} | W:${team.win} D:${team.draw} L:${team.loss}`)
+                    Text(`${index + 1}.`)
                       .fontSize(12)
-                      .fontColor('#D6C2FF')
+                      .fontColor('#FFD700')
+                      .width(12)
 
-                    Text(`GF:${team.goalsFor} GA:${team.goalsAgainst} AVG:${team.goalDiff}`)
-                      .fontSize(12)
-                      .fontColor('#D6C2FF')
+
+                    Column({ space: 2 }) {
+                      Text(team.teamName)
+                        .fontSize(16)
+                        .fontColor('#D6C2FF')
+                        .fontWeight(FontWeight.Bold)
+
+                      Text(`Pts: ${team.points} | W:${team.win} D:${team.draw} L:${team.loss}`)
+                        .fontSize(12)
+                        .fontColor('#D6C2FF')
+
+                      Text(`GF:${team.goalsFor} GA:${team.goalsAgainst} AVG:${team.goalDiff}`)
+                        .fontSize(12)
+                        .fontColor('#D6C2FF')
+                    }
+
+                    Image(team.logo)
+                      .width(36)
+                      .height(36)
+                      .objectFit(ImageFit.Contain)
+                      .margin({ right: 8 })
                   }
-
-                  Image(team.logo)
-                    .width(36)
-                    .height(36)
-                    .objectFit(ImageFit.Contain)
-                    .margin({ right: 8 })
+                  .alignItems(VerticalAlign.Center)
+                  .backgroundColor('#2E1F3C')
+                  .borderRadius(30)
+                  .margin({
+                    top: 6,
+                    bottom: 6,
+                    left: 12,
+                    right: 12
+                  })
+                  .padding({
+                    top: 10,
+                    bottom: 10,
+                    left: 16,
+                    right: 16
+                  })
                 }
-                .alignItems(VerticalAlign.Center)
-                .backgroundColor('#2E1F3C')
-                .borderRadius(30)
-                .margin({
-                  top: 6,
-                  bottom: 6,
-                  left: 12,
-                  right: 12
-                })
-                .padding({
-                  top: 10,
-                  bottom: 10,
-                  left: 16,
-                  right: 16
-                })
-              }
-            })
-          }
-        }
+              },(item: string, index: number) => item)
+            }
       }
+      .width(this.watchSize)
+      .height(this.watchSize)
+      .backgroundColor('#1B1325')
     }
-    .width(this.watchSize)
-    .height(this.watchSize)
-    .backgroundColor('#1B1325')
+    .hideTitleBar(true)
+    .hideBackButton(true)
   }
 }
 

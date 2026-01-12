@@ -7,17 +7,16 @@ const TAG: string = '[PublishOperation]';
 const DOMAIN_NUMBER: number = 0xFF00;
 
 
-export function openNotificationPermission(context: common.UIAbilityContext) {
+export function openNotificationPermission() {
   setTimeout(() => {
-    notificationManager.requestEnableNotification(context).then(() => {
+    notificationManager.isNotificationEnabled().then(() => {
     }).catch((err: BusinessError) => {
     });
   }, 2000); // Waiting for 2 seconds
 }
 
 export function sendNotification() {
-  let context = getContext() as common.UIAbilityContext;
-  openNotificationPermission(context)
+  openNotificationPermission()
   let notificationRequest: notificationManager.NotificationRequest = {
     id: 1,
     content: {
@@ -25,7 +24,7 @@ export function sendNotification() {
       normal: {
         title: 'Match is over',
         text: 'Please check details',
-        additionalText: 'test_additionalText',
+        additionalText: 'test_additionalText'
       }
     }
   };

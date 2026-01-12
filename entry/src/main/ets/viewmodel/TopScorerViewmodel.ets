@@ -9,7 +9,7 @@ import {
   serieATopAssists,
   premierLeagueTopAssists,
   bundesligaTopAssists,
-  ligue1TopAssists,
+  ligue1TopAssists
 } from '../model/PlayerModel'
 import { LeagueService } from '../viewmodel/Singleton';
 import { TopPlayerModel } from '../model/PlayerModel'

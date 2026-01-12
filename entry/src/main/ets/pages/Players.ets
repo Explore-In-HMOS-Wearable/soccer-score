@@ -4,27 +4,25 @@ import { ArcList, ArcListItem, ComponentContent } from '@kit.ArkUI'
 
 @Builder
 function header() {
-  Column() {
     Text('Top Scorers')
       .fontSize(28)
       .fontWeight(FontWeight.Bold)
       .textAlign(TextAlign.Center)
       .margin({ top: 16, bottom: 12 })
       .fontColor('#D6C2FF')
-  }
 }
 
-@Entry
 @Component
 export struct TopScorers {
   watchSize: string = '466px'
   context: UIContext = this.getUIContext()
   header: ComponentContent<object> = new ComponentContent(this.context, wrapBuilder(header))
+  @Consume('pathStack') pathStack: NavPathStack;
+
 
   build() {
+    NavDestination(){
     Flex() {
-      Row() {
-        Column() {
           ArcList({ header: this.header }) {
             ForEach(getTopScorersByLeagueName(), (player: TopPlayerModel, index: number) => {
               ArcListItem() {
@@ -67,13 +65,14 @@ export struct TopScorers {
                   right: 16
                 })
               }
-            })
+            },(item: string, index: number) => item)
           }
-        }
-      }
     }
     .width(this.watchSize)
     .height(this.watchSize)
     .backgroundColor('#1B1325')
+  }
+    .hideTitleBar(true)
+    .hideBackButton(true)
   }
 }
